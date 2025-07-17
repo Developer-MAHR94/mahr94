@@ -43,54 +43,53 @@ const Footer = () => {
   return (
     <footer className="bg-mahr-black border-t border-gray-800">
       <div className="container-custom">
-        <div className="py-8 md:py-12">
-          {/* Logo y descripción - Centrado en móvil */}
-          <div className="text-center md:text-left mb-8 md:mb-0">
-            <div className="flex items-center justify-center md:justify-start mb-4">
-              <img
-                className="h-20 w-20 rounded-full object-cover border-2 border-mahr-blue mr-3"
-                src={process.env.PUBLIC_URL + '/logo.png'}
-                alt="MAHR 94"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'block';
-                }}
-              />
-              <span className="text-xl font-bold text-mahr-white hidden">
-                MAHR 94
-              </span>
+        <div className="py-4 md:py-6">
+          {/* Grid principal con 3 columnas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Logo y descripción */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start mb-3">
+                <img
+                  className="h-10 w-10 rounded-full object-cover border-2 border-mahr-blue mr-2"
+                  src={process.env.PUBLIC_URL + '/logo.png'}
+                  alt="MAHR 94"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="text-lg font-bold text-mahr-white hidden">
+                  MAHR 94
+                </span>
+              </div>
+              <p className="text-gray-300 mb-3 text-xs md:text-sm">
+                Soluciones digitales modernas con tecnología de vanguardia.
+              </p>
+              
+              {/* Redes sociales */}
+              <div className="flex space-x-3 justify-center md:justify-start">
+                {redesSociales.map((red) => (
+                  <a
+                    key={red.name}
+                    href={red.href}
+                    className="text-gray-400 hover:text-mahr-blue transition-colors duration-300"
+                    aria-label={red.name}
+                  >
+                    {red.icon}
+                  </a>
+                ))}
+              </div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md mx-auto md:mx-0">
-              Soluciones digitales modernas con tecnología de vanguardia. 
-              Desarrollamos sitios y aplicaciones que transforman ideas en realidad.
-            </p>
-            
-            {/* Redes sociales - Centrado en móvil */}
-            <div className="flex space-x-4 justify-center md:justify-start">
-              {redesSociales.map((red) => (
-                <a
-                  key={red.name}
-                  href={red.href}
-                  className="text-gray-400 hover:text-mahr-blue transition-colors duration-300"
-                  aria-label={red.name}
-                >
-                  {red.icon}
-                </a>
-              ))}
-            </div>
-          </div>
 
-          {/* Enlaces y contacto en grid responsivo */}
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-12">
             {/* Enlaces rápidos */}
             <div className="text-center md:text-left">
-              <h3 className="text-mahr-white font-semibold mb-4 text-lg">Enlaces Rápidos</h3>
-              <ul className="space-y-3">
+              <h3 className="text-mahr-white font-semibold mb-3 text-base">Enlaces Rápidos</h3>
+              <ul className="space-y-2">
                 {enlacesRapidos.map((enlace) => (
                   <li key={enlace.name}>
                     <a
                       href={enlace.href}
-                      className="text-gray-300 hover:text-mahr-blue transition-colors duration-300 text-sm md:text-base"
+                      className="text-gray-300 hover:text-mahr-blue transition-colors duration-300 text-sm"
                     >
                       {enlace.name}
                     </a>
@@ -101,8 +100,8 @@ const Footer = () => {
 
             {/* Contacto */}
             <div className="text-center md:text-left">
-              <h3 className="text-mahr-white font-semibold mb-4 text-lg">Contacto</h3>
-              <div className="space-y-3 text-gray-300 text-sm md:text-base">
+              <h3 className="text-mahr-white font-semibold mb-3 text-base">Contacto</h3>
+              <div className="space-y-2 text-gray-300 text-sm">
                 <p>developer.mahr94@gmail.com</p>
                 <p>+57 318 205 1224</p>
                 <p>Barranquilla, Colombia</p>
@@ -114,14 +113,15 @@ const Footer = () => {
         {/* Línea divisoria */}
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:items-center text-center md:text-left">
-            <p className="text-gray-300 text-sm">
-              © {currentYear} MAHR 94 - Todos los derechos reservados
-            </p>
+            <div className="text-gray-300 text-sm">
+              <p>© {currentYear} MAHR 94 - Todos los derechos reservados</p>
+              <p className="text-xs text-gray-400 mt-1">Desarrollada por MAHR 94</p>
+            </div>
             <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-6">
               <a href="/privacy-policy" className="text-gray-300 hover:text-mahr-blue text-sm transition-colors duration-300">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-gray-300 hover:text-mahr-blue text-sm transition-colors duration-300">
+              <a href="/terms" className="text-gray-300 hover:text-mahr-blue text-sm transition-colors duration-300">
                 Términos de Servicio
               </a>
             </div>

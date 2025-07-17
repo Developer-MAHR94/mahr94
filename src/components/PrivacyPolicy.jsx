@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
+  const navigate = useNavigate();
+
+  const handleGoHome = () => {
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-mahr-black pt-16">
       <div className="container-custom py-12">
@@ -169,12 +176,12 @@ const PrivacyPolicy = () => {
 
           {/* Back to home button */}
           <div className="text-center mt-8">
-            <a
-              href="#inicio"
+            <button
+              onClick={handleGoHome}
               className="btn-primary inline-block"
             >
               Volver al Inicio
-            </a>
+            </button>
           </div>
         </div>
       </div>
