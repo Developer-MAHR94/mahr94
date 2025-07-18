@@ -32,57 +32,57 @@ const Proyectos = () => {
     },
     {
       id: 4,
-      titulo: 'Sitio Web Corporativo',
-      descripcion: 'Sitio web profesional para empresa con diseño moderno y SEO optimizado.',
-      imagen: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop',
-      tecnologias: ['React', 'Next.js', 'TailwindCSS', 'Framer Motion', 'Vercel'],
-      github: '#',
-      demo: '#'
+      titulo: 'Fortune Cookies',
+      descripcion: 'Aplicación interactiva desarrollada con React, HTML, CSS y JavaScript que simula la experiencia de una galleta de la fortuna digital. Al presionar un botón, la app cambia el fondo y muestra al azar una frase inspiradora o reflexiva, seleccionada de un archivo JSON precargado. Su diseño colorido y dinámico está pensado para ofrecer una experiencia ligera, entretenida y visualmente atractiva.',
+      imagen: '/images/fortune-cookies.png',
+      tecnologias: ['React', 'HTML', 'CSS', 'JavaScript', 'JSON'],
+      github: 'https://github.com/mahr940409/fortune-cookie',
+      demo: 'https://fortune-cookies-mahr94.netlify.app/'
     },
     {
       id: 5,
-      titulo: 'API REST Completa',
-      descripcion: 'API robusta para aplicación móvil con autenticación JWT y documentación Swagger.',
-      imagen: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop',
-      tecnologias: ['Python', 'FastAPI', 'PostgreSQL', 'JWT', 'Docker'],
-      github: '#',
-      demo: '#'
+      titulo: 'CRUD - App',
+      descripcion: 'Aplicación web desarrollada con React, HTML, CSS y JavaScript que implementa un sistema CRUD (Crear, Leer, Actualizar y Eliminar) para la gestión de usuarios. La interfaz permite registrar nuevos usuarios, visualizar sus datos en una tabla, editarlos y eliminarlos de forma eficiente. Es una herramienta ideal para aprender y demostrar el manejo del estado, formularios y operaciones básicas de interacción con datos en React. El proyecto cuenta con un diseño limpio, funcional y completamente responsivo.',
+      imagen: '/images/crud-app.png',
+      tecnologias: ['React', 'HTML', 'CSS', 'JavaScript', 'CRUD'],
+      github: 'https://github.com/mahr940409/crud',
+      demo: 'https://crud-mahr94.netlify.app/'
     },
     {
       id: 6,
-      titulo: 'Portal Educativo',
-      descripcion: 'Plataforma de aprendizaje online con videoconferencias y contenido interactivo.',
-      imagen: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop',
-      tecnologias: ['React', 'Node.js', 'WebRTC', 'MongoDB', 'AWS S3'],
-      github: '#',
-      demo: '#'
+      titulo: 'Pokédex Kanto',
+      descripcion: 'Aplicación web desarrollada con HTML, CSS y JavaScript que permite explorar los 151 Pokémon de la región Kanto. La interfaz presenta una Pokédex interactiva que muestra información básica de cada Pokémon, como su nombre, imagen, tipo y número en la Pokédex. Utiliza datos obtenidos desde una API pública, ofreciendo una experiencia visual atractiva y dinámica para los fans del universo Pokémon.',
+      imagen: '/images/pokedex-kanto.png',
+      tecnologias: ['HTML', 'CSS', 'JavaScript', 'API REST', 'Pokédex'],
+      github: 'https://github.com/mahr940409/pokedex',
+      demo: 'https://pokedex-mahr94.netlify.app/'
     },
     {
       id: 7,
-      titulo: 'Sistema de Inventarios',
-      descripcion: 'Sistema completo de gestión de inventarios con reportes y alertas automáticas.',
-      imagen: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop',
-      tecnologias: ['Vue.js', 'Laravel', 'MySQL', 'Chart.js', 'Redis'],
-      github: '#',
-      demo: '#'
+      titulo: 'Pokedex React',
+      descripcion: 'Aplicación web desarrollada con React, HTML, CSS y JavaScript que muestra todos los Pokémon disponibles hasta la fecha, utilizando una API pública (PokéAPI) para obtener datos actualizados. La interfaz permite explorar información detallada de cada Pokémon, incluyendo su nombre, imagen, tipo, habilidades y estadísticas. Además, cuenta con funcionalidades de búsqueda y navegación, ofreciendo una experiencia fluida, dinámica y totalmente responsiva para los fanáticos de la saga.',
+      imagen: '/images/pokedex-react.png',
+      tecnologias: ['React', 'HTML', 'CSS', 'JavaScript', 'PokéAPI'],
+      github: 'https://github.com/mahr940409/pokedex-mahr94',
+      demo: 'https://pokedex-react-mahr94.netlify.app/'
     },
     {
       id: 8,
-      titulo: 'App de Delivery',
-      descripcion: 'Aplicación móvil para delivery de alimentos con geolocalización en tiempo real.',
-      imagen: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=300&fit=crop',
-      tecnologias: ['React Native', 'Node.js', 'Socket.io', 'Google Maps', 'Firebase'],
-      github: '#',
-      demo: '#'
+      titulo: 'Yoga React',
+      descripcion: 'Aplicación web desarrollada con React, TypeScript, HTML y CSS, diseñada completamente en inglés y enfocada en el bienestar integral. La página ofrece una experiencia de compra fluida mediante un carrito integrado que permite a los usuarios agregar, visualizar y gestionar productos relacionados con el yoga y el autocuidado. Su diseño moderno, limpio y responsivo proporciona una navegación amigable, ideal para quienes buscan mejorar su estilo de vida a través de productos saludables y conscientes.',
+      imagen: '/images/yoga-react.png',
+      tecnologias: ['React', 'TypeScript', 'HTML', 'CSS', 'E-commerce'],
+      github: 'https://github.com/mahr940409/Yoga-Bienestar',
+      demo: 'https://yogareact.netlify.app/'
     },
     {
       id: 9,
-      titulo: 'Blog Personal',
-      descripcion: 'Blog moderno con CMS personalizado y sistema de comentarios integrado.',
-      imagen: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
-      tecnologias: ['Next.js', 'MDX', 'TailwindCSS', 'Vercel', 'Disqus'],
-      github: '#',
-      demo: '#'
+      titulo: 'Game JIA',
+      descripcion: 'Plataforma web desarrollada con Python (Flask) y HTML, que integra usuarios, misiones, rankings y mensajería en un entorno gamificado.',
+      imagen: '/images/game-jia.png',
+      tecnologias: ['Python', 'Flask', 'HTML', 'Gamificación', 'Web App'],
+      github: 'https://github.com/mahr940409/Expedientes-Python',
+      demo: '/proyecto-game-jia'
     }
   ];
 

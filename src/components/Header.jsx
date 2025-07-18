@@ -1,8 +1,32 @@
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
+
+  const handleNavigation = (href) => {
+    if (isHomePage) {
+      // En la página principal, usar navegación interna
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // En otras páginas, navegar a la página principal y luego a la sección
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+    setIsMenuOpen(false);
+  };
 
   const navigation = [
     { name: 'Inicio', href: '#inicio' },
@@ -17,7 +41,21 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#inicio" className="flex items-center">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                if (isHomePage) {
+                  const element = document.querySelector('#inicio');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  navigate('/');
+                }
+              }}
+              className="flex items-center"
+            >
               <img
                 className="h-16 w-16 rounded-full object-cover border-2 border-mahr-blue"
                 src={process.env.PUBLIC_URL + '/logo.png'}
@@ -39,7 +77,11 @@ const Header = () => {
               {navigation.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation(item.href);
+                  }}
                   className="text-mahr-white hover:text-mahr-blue px-3 py-2 text-sm font-medium transition-colors duration-300"
                 >
                   {item.name}
@@ -70,9 +112,12 @@ const Header = () => {
               {navigation.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation(item.href);
+                  }}
                   className="text-mahr-white hover:text-mahr-blue block px-3 py-2 text-base font-medium transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
