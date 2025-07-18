@@ -41,10 +41,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a 
-              href="#" 
-              onClick={(e) => {
-                e.preventDefault();
+            <button 
+              onClick={() => {
                 if (isHomePage) {
                   const element = document.querySelector('#inicio');
                   if (element) {
@@ -54,7 +52,7 @@ const Header = () => {
                   navigate('/');
                 }
               }}
-              className="flex items-center"
+              className="flex items-center bg-transparent border-none cursor-pointer"
             >
               <img
                 className="h-16 w-16 rounded-full object-cover border-2 border-mahr-blue"
@@ -68,24 +66,20 @@ const Header = () => {
               <span className="ml-2 text-xl font-bold text-mahr-white hidden">
                 MAHR 94
               </span>
-            </a>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navigation.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigation(item.href);
-                  }}
-                  className="text-mahr-white hover:text-mahr-blue px-3 py-2 text-sm font-medium transition-colors duration-300"
+                  onClick={() => handleNavigation(item.href)}
+                  className="text-mahr-white hover:text-mahr-blue px-3 py-2 text-sm font-medium transition-colors duration-300 bg-transparent border-none cursor-pointer"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </div>
           </nav>
@@ -110,17 +104,13 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-mahr-black border-t border-gray-800">
               {navigation.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigation(item.href);
-                  }}
-                  className="text-mahr-white hover:text-mahr-blue block px-3 py-2 text-base font-medium transition-colors duration-300"
+                  onClick={() => handleNavigation(item.href)}
+                  className="text-mahr-white hover:text-mahr-blue block px-3 py-2 text-base font-medium transition-colors duration-300 bg-transparent border-none cursor-pointer w-full text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </div>
           </div>
