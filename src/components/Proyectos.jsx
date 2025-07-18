@@ -5,30 +5,30 @@ const Proyectos = () => {
   const proyectos = [
     {
       id: 1,
-      titulo: 'E-commerce Moderno',
-      descripcion: 'Plataforma de comercio electrónico completa con React, TypeScript y Python Django.',
-      imagen: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
-      tecnologias: ['React', 'TypeScript', 'Python', 'Django', 'PostgreSQL'],
-      github: '#',
-      demo: '#'
+      titulo: 'Roman Converter',
+      descripcion: 'Calculadora web interactiva que permite convertir números naturales a números romanos y viceversa. Interfaz sencilla e intuitiva diseñada para facilitar el uso por parte de cualquier usuario.',
+      imagen: '/images/roman-converter.png',
+      tecnologias: ['HTML', 'CSS', 'JavaScript', 'Web App'],
+      github: 'https://github.com/mahr940409/roman-converter',
+      demo: 'https://number-romanconverter.netlify.app/'
     },
     {
       id: 2,
-      titulo: 'Dashboard Analytics',
-      descripcion: 'Panel de control interactivo para análisis de datos con gráficos en tiempo real.',
-      imagen: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-      tecnologias: ['React', 'D3.js', 'Node.js', 'MongoDB', 'Socket.io'],
-      github: '#',
-      demo: '#'
+      titulo: 'Weather App',
+      descripcion: 'Aplicación web desarrollada con React que muestra el clima en tiempo real. Utiliza geolocalización para brindar información meteorológica precisa y actualizada con diseño responsivo e intuitivo.',
+      imagen: '/images/weather-app.png',
+      tecnologias: ['React', 'JavaScript', 'CSS', 'Geolocalización', 'API Weather'],
+      github: 'https://github.com/mahr940409/Wheather-App',
+      demo: 'https://weather-app-mahr94.netlify.app/'
     },
     {
       id: 3,
-      titulo: 'App de Gestión',
-      descripcion: 'Aplicación móvil para gestión empresarial con sincronización en la nube.',
-      imagen: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop',
-      tecnologias: ['React Native', 'Firebase', 'Redux', 'TypeScript', 'AWS'],
-      github: '#',
-      demo: '#'
+      titulo: 'Rick and Morty App',
+      descripcion: 'Aplicación web desarrollada en React que permite explorar distintas dimensiones del universo de Rick and Morty mediante el consumo de una API pública. Interfaz dinámica e intuitiva para los fanáticos de la serie.',
+      imagen: '/images/rick-and-morty-app.png',
+      tecnologias: ['React', 'JavaScript', 'CSS', 'API REST', 'Vite'],
+      github: 'https://github.com/mahr940409/rick-and-morty',
+      demo: 'https://rick-and-morty-mahr94.netlify.app/'
     },
     {
       id: 4,
@@ -140,6 +140,8 @@ const Proyectos = () => {
                 <div className="flex gap-3">
                   <a
                     href={proyecto.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-mahr-white rounded-lg hover:bg-gray-700 transition-colors duration-300"
                   >
                     <CodeBracketIcon className="w-4 h-4" />
@@ -147,6 +149,8 @@ const Proyectos = () => {
                   </a>
                   <a
                     href={proyecto.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-mahr-blue text-mahr-white rounded-lg hover:bg-blue-600 transition-colors duration-300"
                   >
                     <ArrowTopRightOnSquareIcon className="w-4 h-4" />
