@@ -31,66 +31,138 @@ const GameJIAProject = () => {
                   Descripción del Proyecto
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Game JIA es una plataforma web desarrollada con Python (Flask) y HTML, que integra usuarios, 
-                  misiones, rankings y mensajería en un entorno gamificado. Esta aplicación completa permite 
-                  gestionar expedientes digitales de personajes, armas, invocaciones, planetas y elementos.
+                  Esta aplicación web fue desarrollada con Python utilizando el framework Flask y presenta una interfaz construida con HTML y plantillas dinámicas (Jinja2).
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Al ejecutarse en local, la aplicación crea automáticamente su propia base de datos, permitiendo la gestión eficiente de usuarios y datos.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  El sistema incluye un robusto sistema de autenticación, gestión de roles de usuario, 
-                  y una interfaz intuitiva para la administración de contenido relacionado con el universo 
-                  del juego.
+                  Este proyecto demuestra competencias en desarrollo backend con Python y Flask, manejo de bases de datos, y diseño de interfaces web interactivas con HTML.
                 </p>
               </div>
 
-              {/* Características Principales */}
+              {/* Funcionalidades Principales */}
               <div className="bg-gray-900 border border-gray-800 rounded-xl p-8 mb-8">
                 <h2 className="text-3xl font-bold text-mahr-white mb-6">
-                  Características Principales
+                  Funcionalidades Principales
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-mahr-blue rounded-full mt-2"></div>
-                      <div>
-                        <h3 className="text-mahr-white font-semibold">Gestión de Usuarios</h3>
-                        <p className="text-gray-300 text-sm">Sistema de registro y login con autenticación segura, roles de usuario y permisos granulares</p>
+                <div className="space-y-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-4">
+                        <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-mahr-white font-semibold text-lg">Sistema de Autenticación y Roles</h3>
+                          <p className="text-gray-300">Incluye un usuario administrador con permisos especiales y sistema de roles diferenciados.</p>
+                          <div className="mt-3">
+                            <img 
+                              src="/images/game-jia/autenticacion.png" 
+                              alt="Sistema de Autenticación" 
+                              className="w-full h-48 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                              onError={(e) => e.target.style.display = 'none'}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-mahr-white font-semibold text-lg">CRUD Completo</h3>
+                          <p className="text-gray-300">Gestión completa de información dentro del sistema con operaciones Create, Read, Update y Delete.</p>
+                          <div className="mt-3">
+                            <img 
+                              src="/images/game-jia/crud.png" 
+                              alt="CRUD Completo" 
+                              className="w-full h-48 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                              onError={(e) => e.target.style.display = 'none'}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-mahr-white font-semibold text-lg">Registro de Usuarios y Mensajería</h3>
+                          <p className="text-gray-300">Sistema de registro de usuarios y mensajería interna para fomentar la interacción entre usuarios.</p>
+                          <div className="mt-3">
+                            <img 
+                              src="/images/game-jia/mensajeria.png" 
+                              alt="Mensajería Interna" 
+                              className="w-full h-48 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                              onError={(e) => e.target.style.display = 'none'}
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-mahr-blue rounded-full mt-2"></div>
-                      <div>
-                        <h3 className="text-mahr-white font-semibold">Gestión de Personajes</h3>
-                        <p className="text-gray-300 text-sm">Crear, editar y eliminar personajes con atributos completos y asignación de elementos</p>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-4">
+                        <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-mahr-white font-semibold text-lg">Subida de Imágenes</h3>
+                          <p className="text-gray-300">Permite a los usuarios subir y gestionar imágenes dentro del sistema.</p>
+                          <div className="mt-3">
+                            <img 
+                              src="/images/game-jia/imagenes.png" 
+                              alt="Subida de Imágenes" 
+                              className="w-full h-48 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                              onError={(e) => e.target.style.display = 'none'}
+                            />
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-mahr-blue rounded-full mt-2"></div>
-                      <div>
-                        <h3 className="text-mahr-white font-semibold">Armas e Invocaciones</h3>
-                        <p className="text-gray-300 text-sm">Agregar armas e invocaciones a personajes con imágenes y descripciones detalladas</p>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-mahr-white font-semibold text-lg">Sistema de Misiones</h3>
+                          <p className="text-gray-300">Misiones que otorgan puntos y recompensas para mantener la motivación de los usuarios.</p>
+                          <div className="mt-3">
+                            <img 
+                              src="/images/game-jia/misiones.png" 
+                              alt="Sistema de Misiones" 
+                              className="w-full h-48 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                              onError={(e) => e.target.style.display = 'none'}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-4">
+                        <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                        <div>
+                          <h3 className="text-mahr-white font-semibold text-lg">Rankings y Clasificaciones</h3>
+                          <p className="text-gray-300">Sistema de rankings basados en el rendimiento de los usuarios con clasificaciones dinámicas.</p>
+                          <div className="mt-3">
+                            <img 
+                              src="/images/game-jia/rankings.png" 
+                              alt="Rankings y Clasificaciones" 
+                              className="w-full h-48 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                              onError={(e) => e.target.style.display = 'none'}
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-mahr-blue rounded-full mt-2"></div>
-                      <div>
-                        <h3 className="text-mahr-white font-semibold">Gestión de Planetas</h3>
-                        <p className="text-gray-300 text-sm">Crear y gestionar planetas por dimensión con asignación automática a personajes</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-mahr-blue rounded-full mt-2"></div>
-                      <div>
-                        <h3 className="text-mahr-white font-semibold">Sistema de Elementos</h3>
-                        <p className="text-gray-300 text-sm">Gestión de elementos con asignación múltiple a personajes e invocaciones</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-mahr-blue rounded-full mt-2"></div>
-                      <div>
-                        <h3 className="text-mahr-white font-semibold">Interfaz Responsiva</h3>
-                        <p className="text-gray-300 text-sm">Diseño moderno con Bootstrap 5, iconos FontAwesome y experiencia de usuario optimizada</p>
+                  
+                  <div className="mt-8 pt-8 border-t border-gray-800">
+                    <div className="flex items-start gap-4">
+                      <div className="w-3 h-3 bg-mahr-blue rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-full">
+                        <h3 className="text-mahr-white font-semibold text-lg">Interfaz Amigable</h3>
+                        <p className="text-gray-300">Desarrollada con HTML y renderizada desde Flask mediante plantillas dinámicas para una experiencia de usuario optimizada.</p>
+                        <div className="mt-3">
+                          <img 
+                            src="/images/game-jia/interfaz.png" 
+                            alt="Interfaz Amigable" 
+                            className="w-full h-64 object-contain rounded-lg border border-gray-700 bg-gray-800"
+                            onError={(e) => e.target.style.display = 'none'}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>

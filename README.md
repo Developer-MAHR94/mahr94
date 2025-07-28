@@ -15,7 +15,7 @@ Sitio web moderno y responsivo para MAHR 94, desarrollado con React y TailwindCS
 - **Sección Hero** con llamadas a la acción
 - **Servicios** con 4 tarjetas interactivas
 - **Proyectos** en grid responsivo
-- **Formulario de contacto** funcional
+- **Formulario de contacto** funcional con envío de emails via Resend
 - **Botón flotante de WhatsApp**
 - **Footer** con enlaces y redes sociales
 - **Diseño completamente responsivo**
@@ -25,6 +25,8 @@ Sitio web moderno y responsivo para MAHR 94, desarrollado con React y TailwindCS
 - React 18
 - TailwindCSS 3
 - Heroicons
+- Resend (para envío de emails)
+- Netlify Functions
 - HTML5 & CSS3
 - JavaScript ES6+
 
@@ -41,12 +43,19 @@ Sitio web moderno y responsivo para MAHR 94, desarrollado con React y TailwindCS
    npm install
    ```
 
-3. **Ejecutar en modo desarrollo:**
+3. **Configurar Resend (para envío de emails):**
+   - Crea una cuenta en [Resend](https://resend.com)
+   - Obtén tu API key desde el dashboard
+   - En Netlify, ve a Site settings > Environment variables
+   - Agrega `RESEND_API_KEY` con tu clave de API
+   - Verifica tu dominio en Resend para enviar emails
+
+4. **Ejecutar en modo desarrollo:**
    ```bash
    npm start
    ```
 
-4. **Abrir en el navegador:**
+5. **Abrir en el navegador:**
    ```
    http://localhost:3000
    ```
@@ -91,6 +100,20 @@ Cambia el número en `src/components/Contacto.jsx` en el botón flotante:
 ```jsx
 href="https://wa.me/TU_NUMERO?text=Hola,%20me%20interesa%20trabajar%20con%20MAHR%2094"
 ```
+
+### Configuración de Email
+Para que el formulario de contacto funcione correctamente:
+
+1. **Configura tu API key de Resend** en las variables de entorno de Netlify
+2. **Verifica tu dominio** en Resend para poder enviar emails
+3. **Actualiza el remitente** en `netlify/functions/send-email.js`:
+   ```javascript
+   from: 'MAHR94 Website <noreply@tu-dominio-verificado.com>'
+   ```
+4. **Cambia el email de destino** si es necesario:
+   ```javascript
+   to: ['tu-email@ejemplo.com']
+   ```
 
 ## 📱 Responsive Design
 
