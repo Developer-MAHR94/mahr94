@@ -42,7 +42,7 @@ const Contacto = () => {
         setFormData({ nombre: '', email: '', mensaje: '' });
       } else {
         setSubmitStatus('error');
-        console.error('Error al enviar:', result.error);
+        console.error('Error al enviar:', result.error, result.details);
       }
     } catch (error) {
       setSubmitStatus('error');

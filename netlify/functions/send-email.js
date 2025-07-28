@@ -49,12 +49,22 @@ exports.handler = async (event, context) => {
       };
     }
 
+    // Verificar que la API key esté configurada
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY no está configurada');
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ error: 'Configuración de email no disponible' })
+      };
+    }
+
     // Inicializar Resend
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Enviar email
     const { data, error } = await resend.emails.send({
-      from: 'MAHR94 Website <noreply@tu-dominio.com>', // Cambiar por tu dominio verificado
+      from: 'onboarding@resend.dev', // Usar dominio de prueba de Resend
       to: ['developer.mahr94@gmail.com'], // Tu email de destino
       subject: `Nuevo mensaje de contacto de ${nombre}`,
       html: `
@@ -96,7 +106,10 @@ exports.handler = async (event, context) => {
       return {
         statusCode: 500,
         headers,
-        body: JSON.stringify({ error: 'Error al enviar el mensaje' })
+        body: JSON.stringify({ 
+          error: 'Error al enviar el mensaje',
+          details: error.message || 'Error desconocido'
+        })
       };
     }
 
